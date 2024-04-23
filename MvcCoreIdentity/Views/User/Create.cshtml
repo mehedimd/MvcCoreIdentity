@@ -1,0 +1,19 @@
+﻿@model MvcCoreIdentity.View_Models.UserVM
+<form asp-action="Create" asp-asp-controller="User" method="post" enctype="multipart/form-data">
+    @Html.ValidationSummary()
+    <table class="table table-bordered">
+        <tr>
+            <td>
+                <label>Full Name</label>
+                <input asp-for="FullName" class="form-control" />
+            </td>
+            <td>
+                <label>Picture</label>
+                <input type="file" name="Picture" accept="/images*" class="form-control" />
+            </td>
+            <td>
+                <input type="submit" value="Update" class="btn btn-primary" />
+            </td>
+        </tr>
+    </table>
+</form>
